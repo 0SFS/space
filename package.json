@@ -1,0 +1,37 @@
+{
+  "name": "@0sfs/space",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Opt-in space flight for 0SFS. A flight coasts beyond Earth's atmosphere only after this mod is added.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "exports": {
+    "./session": {
+      "source": "./src/session.ts",
+      "default": "./src/session.ts"
+    },
+    "./twoBody": {
+      "source": "./src/twoBody.ts",
+      "default": "./src/twoBody.ts"
+    },
+    "./frames": {
+      "source": "./src/frames.ts",
+      "default": "./src/frames.ts"
+    },
+    "./manifest": "./public/0sfs-mod.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-mod.mjs"
+  },
+  "peerDependencies": {
+    "@0sfs/ground-contact": "0.1.0",
+    "@0sfs/mods": "0.1.0",
+    "foss-earth": "0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@0sfs/ground-contact": { "optional": true },
+    "@0sfs/mods": { "optional": true },
+    "foss-earth": { "optional": true }
+  }
+}
